@@ -23,6 +23,10 @@ public class Passeggero implements Serializable {
 	private String cognome;
 	@Column(name="data_prenot")
 	private String data_prenot;
+	@Column(name="n_volo")
+	private Integer n_volo;
+	@Column(name="compagnia_aerea")
+	private String compagnia_aerea;
 
 	public Passeggero() {}
 
@@ -56,5 +60,20 @@ public class Passeggero implements Serializable {
 
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
+	}
+	public Integer getNVolo() {
+		return n_volo;
+	}
+
+	public void setNVolo(Integer n_volo) {
+		this.n_volo = n_volo;
+	}
+	
+	public String getCompagnia() {
+		return data_prenot;
+	}
+
+	public void setCompagnia(String compagnia_aerea) {
+		this.compagnia_aerea = compagnia_aerea;
 	}
 }

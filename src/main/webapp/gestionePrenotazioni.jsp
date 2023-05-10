@@ -14,6 +14,8 @@
             <form id= "formId2" action ="aggiungiPrenotazione" method= "post" class="current">
             	<label>Nome</label> <input type="text" name="nome"><br> 
             	<label>Cognome</label> <input type="text" name="cognome">
+            	<label>Numero Volo</label> <input type="number" name="volo"><br> 
+            	<label>Compagnia scelta</label> <input type="text" name="compagnia">
             	<input type="submit" name="Prenota" value="Prenota">
             </form>
             

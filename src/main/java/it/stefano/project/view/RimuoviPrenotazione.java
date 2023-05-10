@@ -12,9 +12,6 @@ import java.io.PrintWriter;
 import it.stefano.project.controller.PasseggeroServiceBeanLocal;
 import it.stefano.project.model.Passeggero;
 
-/**
- * Servlet implementation class RimuoviPrenotazione
- */
 @WebServlet("/rimuoviPrenotazione")
 
 public class RimuoviPrenotazione extends HttpServlet {
@@ -27,7 +24,6 @@ public class RimuoviPrenotazione extends HttpServlet {
         super();
     }
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer id = Integer.parseInt(request.getParameter("id_prenotazione"));
 	 	Passeggero pass = passeggeroService.getPasseggeroById(id);
@@ -39,11 +35,7 @@ public class RimuoviPrenotazione extends HttpServlet {
 		out.println("<h1> Cancellazione avvenuta con successo</h1>");
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

@@ -40,24 +40,5 @@ List<Passeggero> passeggeri = (List<Passeggero>)request.getAttribute("clienti");
 		</c:forEach>
 	</TABLE>
 </body>
-<!-- <body>
-<%/*
-List<Cliente> people = (List<Cliente>)request.getAttribute("people");
-for(Cliente c : people)
-{
-    out.print("Id: " + person.getId());
-    out.print("<br/>");
-    out.print("Nome: " + person.getNome());
-    out.print("<br/>");
-    out.print("Anni: " + person.getAnni());
-    
-    out.print("<br/>");
-    out.print("<br/>");
-}*/
-%>
 
-<c:forEach items="${people}" var="user">
-${user.getId()}
-</c:forEach>
-</body>-->
 </html>

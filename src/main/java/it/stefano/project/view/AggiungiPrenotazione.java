@@ -12,9 +12,6 @@ import java.io.PrintWriter;
 import it.stefano.project.controller.PasseggeroServiceBeanLocal;
 import it.stefano.project.model.Passeggero;
 
-/**
- * Servlet implementation class AggiungiPrenotazione
- */
 @WebServlet("/aggiungiPrenotazione")
 public class AggiungiPrenotazione extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -30,10 +27,15 @@ public class AggiungiPrenotazione extends HttpServlet {
 		String nome = request.getParameter("nome");
 		String cognome = request.getParameter("cognome");
 		String data = "05/05/05";
+		Integer n_volo = Integer.parseInt(request.getParameter("volo"));
+		String compagnia_aerea = request.getParameter("compagnia");
+
 	 	Passeggero pass = new Passeggero();
 		pass.setNome(nome);
 		pass.setCognome(cognome);
 		pass.setData(data);
+		pass.setNVolo(n_volo);
+		pass.setCompagnia(compagnia_aerea);
 		passeggeroService.inserisci(pass);
 		request.getRequestDispatcher("index.jsp").include(request, response);
 		request.getRequestDispatcher("gestionePrenotazioni.jsp").include(request, response);
